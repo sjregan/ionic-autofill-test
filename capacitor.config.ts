@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.wearezipline.demo',
   appName: 'AutoFill Test',
   webDir: 'www',
   bundledWebRuntime: false

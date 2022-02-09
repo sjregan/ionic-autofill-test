@@ -1,0 +1,6 @@
+{
+	"appId": "com.wearezipline.demo",
+	"appName": "AutoFill Test",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

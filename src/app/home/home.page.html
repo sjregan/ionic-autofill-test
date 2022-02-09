@@ -1,25 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inbox
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">
-        Inbox
+        Login
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
+
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <p>First you need to save credentials to your keychain.</p>
+      <p><ion-button (click)="launchSite()">Launch Website</ion-button></p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <p>Once you have credentials in your keychain for the associated domain,
+        the saved credentials should be offered in the following form.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <form autocomplete="on">
+        <ion-list>
+          <ion-item>
+            <ion-input type="email" autocomplete="email" placeholder="Email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" autocomplete="current-password" placeholder="Password"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <ion-button type="submit" expand="full" (click)="doLogin();">Login</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
